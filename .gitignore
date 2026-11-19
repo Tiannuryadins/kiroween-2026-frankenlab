@@ -1,0 +1,12 @@
+# Runtime / OS
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# NOTE: .kiro/ is intentionally NOT ignored — the Kiroween rules require
+# the /.kiro directory (specs, hooks, steering) to be present in the repo.

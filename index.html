@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FrankenLab — Stitch-Your-Own Monster Laboratory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>⚡ FrankenLab ⚡</h1>
+    <p class="subtitle">Stitch-Your-Own Monster Laboratory</p>
+    <button id="btn-motd" class="btn btn-secondary">🗓 Monster of the Day</button>
+  </header>
+
+  <main>
+    <!-- Slab: monster preview -->
+    <section class="slab-section" aria-label="Monster Slab">
+      <div class="slab-wrap">
+        <svg id="slab" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Monster preview">
+          <!-- slot fragments are injected by app.js -->
+          <g id="slot-arms"></g>
+          <g id="slot-torso"></g>
+          <g id="slot-head"></g>
+          <g id="slot-legs"></g>
+        </svg>
+        <canvas id="fx" aria-hidden="true"></canvas>
+      </div>
+
+      <!-- Monster identity -->
+      <div class="monster-identity">
+        <h2 id="monster-name" class="monster-name">???</h2>
+        <div class="stats" id="monster-stats">
+          <span class="stat"><span class="stat-label">STR</span><span id="stat-strength" class="stat-val">—</span></span>
+          <span class="stat"><span class="stat-label">SPK</span><span id="stat-spook"    class="stat-val">—</span></span>
+          <span class="stat"><span class="stat-label">CHM</span><span id="stat-charm"    class="stat-val">—</span></span>
+        </div>
+        <div class="power-wrap">
+          <span class="power-label">POWER</span>
+          <span id="monster-power" class="power-val">—</span>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="actions">
+        <button id="btn-mashup"  class="btn btn-primary">🎲 Mashup</button>
+        <button id="btn-alive"   class="btn btn-danger">⚡ IT'S ALIVE!</button>
+        <button id="btn-save"    class="btn btn-secondary">💾 Save to Journal</button>
+        <button id="btn-share"   class="btn btn-secondary">🔗 Copy Share Link</button>
+      </div>
+      <p id="share-feedback" class="share-feedback" aria-live="polite"></p>
+    </section>
+
+    <!-- Part pickers -->
+    <section class="pickers-section" aria-label="Part Pickers">
+      <div id="pickers" class="pickers">
+        <!-- one fieldset per slot, injected by app.js -->
+      </div>
+    </section>
+
+    <!-- Lab Journal -->
+    <section class="journal-section" aria-label="Lab Journal">
+      <h2 class="section-title">📔 Lab Journal</h2>
+      <ul id="journal-list" class="journal-list">
+        <!-- rows injected by app.js -->
+      </ul>
+      <p id="journal-empty" class="journal-empty">No saved monsters yet.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>FrankenLab · Kiroween 2026 · Frankenstein Category · Zero dependencies</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
