@@ -1,0 +1,1 @@
+{"hooks":[{"action":{"command":"npm test","type":"command"},"description":"Run the Node test suite whenever Kiro saves or edits a file under src/, so regressions are caught immediately.","matcher":"src/.*\\.js$","name":"test-on-save","trigger":"PostFileSave"}],"version":"v1"}
